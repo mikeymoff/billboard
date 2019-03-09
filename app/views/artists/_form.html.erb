@@ -1,0 +1,10 @@
+<h1><%= @artist.name ? 'Edit Artist' : 'Create Artist' %></h1>
+<hr />
+<%= form_for @artist do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, autofocus: true %>
+  <br />
+  <%= f.label :song %>
+  <%= f.text_area :song, required: true %>
+  <%= f.submit %>
+<% end %>
